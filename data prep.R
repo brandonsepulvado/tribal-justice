@@ -18,8 +18,8 @@ names(data)
 
 # give intuitive names
 data <- data %>% 
-  rename(arrest.powers = A1, 
-         self.gov = A2,
+  rename(arrest.powers = a1, 
+         self.gov = a2,
          
          tibal.le.bia = A3_1,
          tibal.le.tribes = A3_2,
@@ -180,8 +180,103 @@ data <- data %>%
          prob.ad = b8,
          prob.juv = b9,
          
+         nonres.juv.none = b10_1,
+         nonres.juv.nontribal = b10_2,
+         nonres.juv.soc = b10_3,
+         nonres.juv.inform = b10_4,
+         nonres.juv.form = b10_5,
+         nonres.juv.other = b10_6,
+         nonres.juv.other.desc = b10_6_other,
          
-         )
+         res.juv.tribe = b11_1,
+         res.juv.othertribe = b11_2,
+         res.juv.nontribal = b11_3,
+         res.juv.none = b11_4,
+         
+         ft.trialjudge = b12_1,
+         ft.appeljudge = b12_2,
+         ft.admin = b12_3,
+         ft.interp = b12_4,
+         ft.prosec = b12_5,
+         ft.pubdef = b12_6,
+         ft.proboff = b12_7,
+         ft.parole = b12_8,
+         ft.peace = b12_9,
+         ft.bailiff = b12_10,
+         ft.attourn = b12_11,
+         ft.support = b12_12,
+         ft.total = b12_13,
+         
+         pt.trialjudge = b13_1,
+         pt.appeljudge = b13_2,
+         pt.admin = b13_3,
+         pt.interp = b13_4,
+         pt.prosec = b13_5,
+         pt.pubdef = b13_6,
+         pt.proboff = b13_7,
+         pt.parole = b13_8,
+         pt.peace = b13_9,
+         pt.bailiff = b13_10,
+         pt.attourn = b13_11,
+         pt.support = b13_12,
+         pt.total = b13_13,
+         
+         judges.elect = B14_1,
+         judges.appoint = B14_2,
+         judges.other = B14_3,
+         judges.other.desc = B14_3_other,
+         
+         term.one = b15_1,
+         term.two = b15_2,
+         term.three = b15_3,
+         term.four = b15_4,
+         term.other = b15_5,
+         term.other.desc = b15_5_other,
+         
+         civil.jury = b17,
+         
+         count.charges = b18_1,
+         count.def = b18_2,
+         count.incid = b18_3,
+         count.other = b18_4,
+         count.other.desc = b18_4_other,
+         
+         matters.man = b19_1,
+         matters.comp = b19_2,
+         matters.comp = b19_3,
+         matters.other = b19_4,
+         matters.other.desc = b19_4_other,
+         
+         num.crim.cases = b20,
+         num.crim.cases.est = b20a,
+         
+         num.crim.nonind = b21,
+         num.crim.nonind.est = b21a,
+         
+         num.civil.cases = b22,
+         num.civil.cases.est = b22a,
+         
+         num.civil.nonind = b23,
+         num.civil.nonind.est = b23a,
+         
+         vic.services = b24,
+         networked.tribe = b25,
+         networked.outside = b26,
+         
+         bia.cfr = c1,
+         rely.state = c2,
+         rely.juvfam = c3,
+         child.sup = c4,
+         
+         child.supp.pat = c5_1,
+         child.supp.est = c5_2,
+         child.supp.enf = c5_3,
+         child.supp.mod = c5_4,
+         child.supp.none = c5_5,
+         remove = .....)
+
+# remove random "....." column
+data$remove <- NULL
 
 
 
