@@ -123,7 +123,37 @@ data <- data %>%
          sys.type.circuit = b2_3,
          sys.type.trad = b2_4,
          sys.type.intertribal = b2_5,
+         #B2_6_
+         #B2_6_
          
+         cases.crim = b3_1,
+         cases.traffic = b3_2,
+         cases.juv = b3_3,
+         cases.juv.other = b3_4,
+         cases.family = b3_5,
+         cases.domestic = b3_6,
+         cases.civil = b3_7,
+         cases.probate = b3_8,
+         cases.widlife = b3_9,
+         cases.other = b3_10,
+         cases.other.desc = b3_10_other,
+         
+         court.gen = b4_1,
+         court.juv = b4_2,
+         court.fam = b4_3,
+         court.wild = b4_4,
+         court.appel = b4_5,
+         court.peace = b4_6,
+         court.other = b4_7,
+         court.other.desc = b4_7_other,
+         
+         num.court.gen = b5_1,
+         num.court.juv = b5_2,
+         num.court.fam = b5_3,
+         num.court.wildlife = b5_4,
+         num.court.appel = b5_5,
+         num.court.peace = b5_6,
+         num.court.other = b5_7,
          )
 
 
