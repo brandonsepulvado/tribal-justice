@@ -154,6 +154,33 @@ data <- data %>%
          num.court.appel = b5_5,
          num.court.peace = b5_6,
          num.court.other = b5_7,
+         
+         sanc.ad.no = b6_1,
+         sanc.ad.drug = b6_2,
+         sanc.ad.alc = b6_3,
+         sanc.ad.commserv = b6_4,
+         sanc.ad.couns = b6_5,
+         sanc.ad.fine = b6_6,
+         sanc.ad.rest = b6_7,
+         sanc.ad.recon = b6_8,
+         sanc.ad.other = b6_9,
+         sanc.ad.other.desc = b6_9_other,
+         
+         sanc.juv.no = b7_1,
+         sanc.juv.drug = b7_2,
+         sanc.juv.alc = b7_3,
+         sanc.juv.commserv = b7_4,
+         sanc.juv.couns = b7_5,
+         sanc.juv.fine = b7_6,
+         sanc.juv.rest = b7_7,
+         sanc.juv.recon = b7_8,
+         sanc.juv.other = b7_9,
+         sanc.juv.other.desc = b7_9_other,
+         
+         prob.ad = b8,
+         prob.juv = b9,
+         
+         
          )
 
 
