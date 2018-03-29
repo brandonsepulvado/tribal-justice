@@ -3,6 +3,7 @@
 #####
 
 library(dplyr)
+library(stringr)
 
 # import data
 csv <- read.csv("ctjaic02_formatted.csv", header = TRUE)
@@ -18,7 +19,9 @@ names(data)
 
 # give intuitive names
 data <- data %>% 
-  rename(arrest.powers = a1, 
+  rename(state.name = State.name,
+         tribe.name = Tribe.Name,
+         arrest.powers = a1, 
          self.gov = a2,
          
          tibal.le.bia = A3_1,
@@ -243,7 +246,7 @@ data <- data %>%
          
          matters.man = b19_1,
          matters.comp = b19_2,
-         matters.comp = b19_3,
+         matters.comb = b19_3,
          matters.other = b19_4,
          matters.other.desc = b19_4_other,
          
@@ -278,6 +281,31 @@ data <- data %>%
 # remove random "....." column
 data$remove <- NULL
 
+
+
+###
+### analyses
+###
+
+# state name var type
+class(data$state.name)
+
+# number of states present in data
+levels(data$state.name)
+
+# convert to character
+data$state.name <- as.character(data$state.name)
+
+# number of rows
+nrow(data)
+
+# remove two errant rows
+data <- data %>% 
+  mutate(delete = str_detect(state.name, "Note:")) %>% 
+  filter(delete != TRUE & nchar(state.name) != 0)
+
+# verify two rows removed
+nrow(data)
 
 
 
